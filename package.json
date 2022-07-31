@@ -1,0 +1,29 @@
+{
+  "name": "mern-tut-traversy-media",
+  "version": "1.0.0",
+  "description": "Goalsetter app from youtube tutorial",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flameryx/mern-tut-traversy-media.git"
+  },
+  "author": "Ricardo Sosa Melo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/flameryx/mern-tut-traversy-media/issues"
+  },
+  "homepage": "https://github.com/flameryx/mern-tut-traversy-media#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
