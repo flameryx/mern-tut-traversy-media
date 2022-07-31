@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const { getGoals, setGoal, updateGoal, deleteGoal } = require("../controllers/goalController");
 
 // CRUD:
 //   C -> Create
@@ -8,22 +9,15 @@ const router = express.Router();
 //   D -> Delete
 
 // get is used to read content from the backend
-router.get("/", (req, res) => {
-  res.status(200).json({ message: "Get goals" });
-});
+router.get("/", getGoals);
 
 // post is used to create/add content to the backend
-router.post("/", (req, res) => {
-  res.status(200).json({ message: "Set goal" });
-});
+router.post("/", setGoal);
 
 // put is used to update content in the backend
-router.put("/:id", (req, res) => {
-  res.status(200).json({ message: `Update goal ${req.params.id}` });
-});
+router.put("/:id", updateGoal);
 
-router.delete("/:id", (req, res) => {
-  res.status(200).json({ message: `Delete goal ${req.params.id}` });
-});
+// delete is used to delete content in the backend
+router.delete("/:id", deleteGoal);
 
 module.exports = router;
